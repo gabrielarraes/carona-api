@@ -50,6 +50,12 @@ public class RideProgram extends AbstractBaseEntity {
     @Column(precision = 10, scale = 2, name = "price")
     private BigDecimal price;
 
+    @Column(name = "reference_point", nullable = false)
+    private String referencePoint;
+
+    @Column(name = "destination_point", nullable = false)
+    private String destinationPoint;
+
     @OneToMany(mappedBy = "rideProgram", fetch = FetchType.EAGER, targetEntity = RideReservation.class)
     private Set<RideReservation> ridesReservations = new HashSet<>();
 

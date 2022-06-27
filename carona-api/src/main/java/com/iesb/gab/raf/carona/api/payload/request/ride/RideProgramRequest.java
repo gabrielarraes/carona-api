@@ -26,4 +26,11 @@ public final class RideProgramRequest {
 
     @DecimalMin(value = "0.01")
     private BigDecimal price;
+
+    @NotBlank(message = "The reference Point cannot be blank")
+    private String referencePoint;
+
+    @NotBlank(message = "The Destination Point cannot be blank")
+    private String destinationPoint;
+
 }

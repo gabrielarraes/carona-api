@@ -67,6 +67,18 @@ public final class RideProgramBuilder {
         return this;
     }
 
+    public RideProgramBuilder withReferencePoint(final String referencePoint) {
+        rideProgram.setReferencePoint(referencePoint);
+
+        return this;
+    }
+
+    public RideProgramBuilder withDestinationPoint(final String destinationPoint) {
+        rideProgram.setDestinationPoint(destinationPoint);
+
+        return this;
+    }
+
     public RideProgramBuilder withTabRidesReservations(final Set<RideReservation> ridesReservations) {
         rideProgram.setRidesReservations(ridesReservations);
 

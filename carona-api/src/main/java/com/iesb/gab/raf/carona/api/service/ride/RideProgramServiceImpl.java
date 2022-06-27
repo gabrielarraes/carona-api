@@ -53,6 +53,8 @@ public class RideProgramServiceImpl implements RideProgramService {
                 .withDay(rideProgramRequest.getDay())
                 .withDepartureTime(rideProgramRequest.getDepartureTime())
                 .withPrice(rideProgramRequest.getPrice())
+                .withReferencePoint(rideProgramRequest.getReferencePoint())
+                .withDestinationPoint(rideProgramRequest.getDestinationPoint())
                 .build();
 
         return new RideProgramDto(rideProgramRepository.save(rideProgram));
@@ -101,6 +103,8 @@ public class RideProgramServiceImpl implements RideProgramService {
         rideProgram.setDay(rideProgramRequest.getDay());
         rideProgram.setDepartureTime(rideProgramRequest.getDepartureTime());
         rideProgram.setPrice(rideProgramRequest.getPrice());
+        rideProgram.setReferencePoint(rideProgramRequest.getReferencePoint());
+        rideProgram.setDestinationPoint(rideProgramRequest.getDestinationPoint());
 
         return new RideProgramDto(rideProgramRepository.save(rideProgram));
     }

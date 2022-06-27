@@ -23,6 +23,8 @@ public class RideProgramBaseDto extends AbstractBaseDto implements Serializable 
     protected Boolean isActive;
     protected Boolean isFull;
     protected BigDecimal price;
+    protected String referencePoint;
+    protected String destinationPoint;
 
     public RideProgramBaseDto(final RideProgram rideProgram) {
         super(rideProgram);
@@ -34,5 +36,7 @@ public class RideProgramBaseDto extends AbstractBaseDto implements Serializable 
         isActive = rideProgram.getIsActive();
         isFull = rideProgram.getIsFull();
         price = rideProgram.getPrice();
+        referencePoint = rideProgram.getReferencePoint();
+        destinationPoint = rideProgram.getDestinationPoint();
     }
 }

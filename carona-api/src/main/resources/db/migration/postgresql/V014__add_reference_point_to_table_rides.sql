@@ -1,0 +1,2 @@
+ALTER TABLE tab_rides_programs
+    ADD COLUMN reference_point CHARACTER VARYING(255) DEFAULT NULL
